@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    max-width: 400px;
+    text-align: center;
+    border: solid rgb(38, 4, 58);
+    border-radius: 10px;
+}
+button {
+    background-color: rgb(20, 3, 116);
+    width: 100%;
+    color: white;
+}
+img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}
+h1 {
+    color: rgb(82, 7, 97);
+}

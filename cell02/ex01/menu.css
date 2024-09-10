@@ -1,0 +1,16 @@
+ิีิี.menu, button {
+    background-color: pink;
+    display: block;
+    font-size: 14px;
+    border-radius: 10px;;
+}
+.dropdown {
+    display: inline-block;
+}
+.menu {
+    display: none;
+    list-style: none;
+}
+.dropdown:hover .menu {
+    display: block;
+  }
