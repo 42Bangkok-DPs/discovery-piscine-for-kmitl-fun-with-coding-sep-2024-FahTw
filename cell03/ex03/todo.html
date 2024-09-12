@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple To-Do List</title>
+    <style>
+      #ft_list {
+        margin-top: 20px;
+        border: solid rgb(93, 14, 158);
+        min-height: 200px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      #add-todo-btn {
+        width: 100%;
+        border: solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      #new-todo-input {
+        width: 80vw;
+      }
+
+      #addnew {
+        width: 100px;
+        color: blueviolet;
+        background-color: rgb(230, 206, 227);
+        border: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="ft_list"></div>
+    <form id="add-todo-btn">
+        <input type="text" id="new-todo-input" placeholder="Enter your to do ka">
+        <button type="submit" id="addnew">New</button>
+    </form>
+  </body>
+</html>

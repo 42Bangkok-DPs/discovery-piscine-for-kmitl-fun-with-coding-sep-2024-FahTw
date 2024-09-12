@@ -2,19 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Balloon Click</title>
     <style>
-        .balloon {
-            background-color: red;
-            border-radius: 100%;
+        #balloon {
             width: 200px;
             height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            transition: background-color 0.3s, width 0.3s, height 0.3s;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="balloon"></div>
+
+<div id="balloon"></div>
+
+<script>
+    let size = 100;
+    const colors = ['red', 'green', 'blue'];
+    let colorIndex = 0;
+
+//เกิดอะไรขึ้นตอนคลิ๊กจั้บ
+    document.getElementById('balloon').addEventListener('click', function() {
+        size += 10;
+        this.style.width = size + 'px';
+        this.style.height = size + 'px';
+
+//
+        colorIndex = (colorIndex + 1) % colors.length;
+        this.style.backgroundColor = colors[colorIndex];
+    });
+</script>
+
 </body>
 </html>
