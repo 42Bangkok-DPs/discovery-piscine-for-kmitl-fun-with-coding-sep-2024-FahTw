@@ -12,16 +12,19 @@
     <button onclick="changebg()">Click here</button>
 
     <script>
-    let isPink = true;
 
-    function changebg() {
-        if (isPink) {
-            document.body.style.backgroundColor = "pink";
-        } else {
-            document.body.style.backgroundColor = "skyblue";
+        function randomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
         }
-        isPink = !isPink;
-    }
+
+        function changebg() {
+            document.body.style.backgroundColor = randomColor();
+        }
     </script>
 
 </body>
