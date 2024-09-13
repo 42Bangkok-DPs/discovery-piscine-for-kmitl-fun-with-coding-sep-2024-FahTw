@@ -14,25 +14,45 @@
             cursor: pointer;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
 <div id="balloon"></div>
 
 <script>
-    let size = 100;
-    const colors = ['red', 'green', 'blue'];
-    let colorIndex = 0;
+    $(document).ready(function() {
+        var size = 200;
+        var colors = ['red', 'green', 'blue'];
+        var colorIndex = 0;
 
-//เกิดอะไรขึ้นตอนคลิ๊กจั้บ
-    document.getElementById('balloon').addEventListener('click', function() {
-        size += 10;
-        this.style.width = size + 'px';
-        this.style.height = size + 'px';
+        $('#balloon').on('click', function() {
+            if (size > 420) {
+                size = 200;
+            } else {
+                size += 10;
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
 
-//
-        colorIndex = (colorIndex + 1) % colors.length;
-        this.style.backgroundColor = colors[colorIndex];
+            $(this).css({
+                width: size + 'px',
+                height: size + 'px',
+                backgroundColor: colors[colorIndex]
+            });
+        });
+
+        $('#balloon').on('mouseleave', function() {
+            if (size > 200) {
+                size -= 5;
+                colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+                
+                $(this).css({
+                    width: size + 'px',
+                    height: size + 'px',
+                    backgroundColor: colors[colorIndex]
+                });
+            }
+        });
     });
 </script>
 

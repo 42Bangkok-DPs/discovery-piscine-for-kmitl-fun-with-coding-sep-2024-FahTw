@@ -10,8 +10,12 @@
     align-items: center;
 }
 .scroll {
-    background-color: orange;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/030/471/439/small_2x/cute-puppy-with-blue-sky-and-clouds-on-the-background-ai-generated-photo.jpg");
     height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
