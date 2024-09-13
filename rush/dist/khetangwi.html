@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        
-        <nav class="bg-gray-800 p-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="text-white hover:text-gray-400 cursor-pointer">About</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-400">Skill</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-400">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="text-5xl text-purple-900 font-bold mt-6 mb-4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>khetangwi</title>
+  </head>
+  <body>
+    <div class="bg-purple-200">
+      <nav class="bg-fuchsia-950 p-4">
+        <div class="container m-auto flex justify-end items-center text-[25px]">
+          <ul class="flex space-x-16">
+            <li>
+              <a href="#" class="text-white hover:text-gray-400 cursor-pointer"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-gray-400">Skill</a>
+            </li>
+            <li>
+              <a href="#" class="text-white hover:text-gray-400">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="intro border-2 border-red-700 mx-40 my-10">
+        <div class="flex items-center space-x-10">
+          <div class="text-[120px] text-purple-900 font-bold mt-6 mb-4">
             <h1>Hello</h1>
-        </div>
-        <div class="text-2xl">
+          </div>
+
+          <div class="text-6xl">
             <h1>Khemapson Tangwirun</h1>
-            <img src="" alt="">
+          </div>
+
+          <div>
+            <img src="../src/assets/girl.png" alt="girl" />
+          </div>
         </div>
+      </section>
+
+      <section class="about h-full bg-white p-8">
+        <div class="flex justify-center items-center border-2 border-red-700">
+          <h1 class="text-5xl">About me</h1>
+        </div>
+
+        <div class="text-center mb-4">
+          <h1 class="text-3xl">I'm Fah</h1>
+          <p class="text-xl">Student</p>
+        </div>
+
+        <div class="flex justify-center lg:justify-end mb-4">
+          <img
+            src="../src/assets/fah.webp"
+            alt="fah"
+            style="
+              width: 100%;
+              max-width: 300px;
+              max-height: 400px;
+              object-fit: cover;
+              border-radius: 0.5rem;
+            "
+          />
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg">ค่อยคิดว่าใส่ไรดี</p>
+        </div>
+      </section>
+
+      <section class="skills h-full bg-slate-900 p-8">
+        <div class="flex justify-center items-center border-2 border-red-700">
+          <h1 class="text-5xl">Skills</h1>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>

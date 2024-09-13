@@ -10,12 +10,22 @@ table {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    grid-template-columns: repeat(2, 1fr);
-
 }
 #t_1 {
     background-color: aquamarine;
 }
 #t_2 {
     background-color: blueviolet;
+}
+
+@media (max-width: 600px) {
+    table, tr, th {
+        display: block;
+        width: 100vw;
+        text-align: center;
+    }
+    th {
+        height: 50vh;
+        border: solid red;
+    }
 }

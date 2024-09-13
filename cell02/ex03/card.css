@@ -24,3 +24,13 @@ img {
 h1 {
     color: rgb(82, 7, 97);
 }
+.social {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#facebook{
+    width: 20px;
+    height: 20px;
+}
