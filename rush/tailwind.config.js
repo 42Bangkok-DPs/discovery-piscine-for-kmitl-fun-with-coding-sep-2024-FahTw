@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backdropBlur: {
+        '3xl': '60px',  // เพิ่มขนาดที่คุณต้องการที่นี่
+      },
+    },
   },
   plugins: [],
 }
-

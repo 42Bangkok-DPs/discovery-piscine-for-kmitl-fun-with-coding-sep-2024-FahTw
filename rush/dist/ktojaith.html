@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ktojaith.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav id="navi" class="bg-fuchsia-950 p-4 fixed top-0 w-full z-50">
+      <div class="container mx-auto flex justify-center md:justify-end items-center text-[16px] md:text-[25px]">
+        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+          <li><a href="#intro" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">Home</a></li>
+          <li><a href="#about" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">About</a></li>
+          <li><a href="#skills" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">Skill</a></li>
+          <li><a href="#contact" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section id="intro" class="border-2 bg-purple-200 min-h-screen flex flex-col justify-center">
+      <div id="main" class="mx-4 md:mx-10 lg:mx-40 my-10">
+        <div class="flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-10">
+          <div id="Hello" class="text-[80px] md:text-[120px] font-bold mt-6 mb-4 text-center md:text-left">
+            <h1>Hello</h1>
+          </div>
+          <div class="text-4xl md:text-6xl text-center md:text-left">
+            <h1>Kittidet Tojaitham</h1>
+          </div>
+          <div class="text-center">
+            <img id="SD" class="w-full max-w-xs md:max-w-xl" src="../src/assets/SD_Paper_BG.jpg"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="about" class="bg-white p-4 md:p-8">
+      <div id="abm" class="flex justify-center items-center py-4">
+        <h1 class="text-3xl md:text-5xl font-bold">About me</h1>
+      </div>
+      <div class="text-center my-4">
+        <h1 class="text-2xl md:text-3xl">Chogun</h1>
+      </div>
+      <div class="flex justify-center mb-4">
+        <img
+          src="../src/assets/chogun.jpg"
+          alt="chogun"
+          class="w-full object-cover max-w-xs md:max-w-[400px] md:h-[400px] rounded-lg"
+        />
+      </div>
+      <div class="text-center">
+        <p class="text-base md:text-lg">Hello, My name is Chogun. 
+          <br>I'm studying at Faculty of IT KMITL university<br>now I'm sophomore in this hell
+          <img src="../src/assets/skull.jpg" style="width: 60px; margin: auto;">
+        </p>
+      </div>
+    </section>
+    
+    <section id="skills" class="min-h-screen bg-violet-950 p-4 md:p-16">
+      <div class="text-center">
+        <h1 style="padding: 15px;" class="text-white text-3xl md:text-5xl font-bold">Skills</h1>
+      </div>
+
+      <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-white text-xl">
+
+        <div class="bg-white bg-opacity-15 rounded-2xl flex justify-center items-center">
+          <li class="space-x-2">
+            <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/html-5--v1.png" alt="html-5"/>
+            <span class="flex items-end justify-center">Html</span>
+          </li>
+        </div>
+
+        <div class="bg-white bg-opacity-15 rounded-2xl flex justify-center items-center">
+          <li class="space-x-2">
+            <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/css3.png" alt="css"/>
+            <span class="flex items-end justify-center">Css</span>
+          </li>
+        </div>
+
+        <div class="bg-white bg-opacity-15 rounded-2xl flex justify-center items-center">
+          <li class="space-x-2">
+            <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/python--v1.png" alt="python"/>
+            <span class="border-red-50  flex items-end justify-center">Python</span>
+          </li>
+        </div>
+
+        <div class="bg-white bg-opacity-15 rounded-2xl flex justify-center items-center">
+          <li class="space-x-2 ">
+            <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/java-coffee-cup-logo--v1.png" alt="java"/>
+            <span class="flex items-end justify-center">Java</span>
+          </li>
+        </div>
+
+        <div class="bg-white bg-opacity-15 rounded-2xl flex justify-center items-center">
+          <li class="space-x-2">
+            <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/?size=100&id=shQTXiDQiQVR&format=png&color=000000" alt="C"/>
+            <span class="flex items-end justify-center">C</span>
+          </li>
+        </div>
+      </ul>
+    </section>
+
+    <section id="contact" class="bg-white p-4 md:p-7">
+        <div id="allcontact">
+            <div class="contactname">
+                <h1 id="conname">Contact</h1>
+            </div>
+            <div class="column">
+                <a href="https://www.facebook.com/profile.php?id=100029028395784">
+                    <img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" style="width:100%">
+                </a>
+            </div>
+            <div class="column">
+                <a href="https://www.instagram.com/chogun_sduck/">
+                    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" style="width:100%">
+                </a>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

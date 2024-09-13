@@ -1,72 +1,72 @@
 #navi {
-  background-color: #3300c0;
-  font-family: Segoe UI;
-  font-weight: 100;
+    background-color: #3300c0;
+    font-family: Segoe UI;
+    font-weight: 100;
 }
 
 #intro {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../src/assets/rush_bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../src/assets/rush_bg.jpg);
 }
 
 #SD {
-  border-radius: 15px;
-  box-shadow: 2px 2px 1px 0 #dbdbdb;
+    border-radius: 15px;
+    box-shadow: 2px 2px 1px 0 #dbdbdb;
 }
 
 #Hello {
-  color: #3300c0;
+    color: #3300c0;
 }
 
 #abm {
-  color: #3300c0;
+    color: #3300c0;
 }
 
 #skills {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../src/assets/rush_bg2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../src/assets/rush_bg2.jpg);
 }
 
 #main {
-  background-color: #fcfcfc;
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 1px 1px 2px 0 #fcfcfc;
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 0 #fcfcfc;
 }
 
 #contact {
-  background-color: #3300c0;
+    background-color: #3300c0;
 }
 
 #conname {
-  font-size: 20px;
-  font-family: Segoe UI;
-  font-weight: 100px;
-  width: fit-content;
-  padding: 5px;
-  background-color: #fcfcfc;
-  border-radius: 15px;
-  box-shadow: 1px 1px 2px 0 #ffffff;
-  margin-left: 1%;
+    font-size: 20px;
+    font-family: Segoe UI;
+    font-weight: 100px;
+    width: fit-content;
+    padding: 5px;
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px 0 #ffffff;
+    margin-left: 1%;
 }
 
 .column {
-  float: left;
-  width: 9%;
-  padding: 15px;
-}
+    float: left;
+    width: 9%;
+    padding: 15px;
+  }
 
 #allcontact::after {
-  border: 1px solid;
-  content: "";
-  clear: both;
-  display: table;
+    border: 1px solid;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /*
@@ -835,7 +835,7 @@ video {
 
 .bg-fuchsia-950 {
   --tw-bg-opacity: 1;
-  background-color: rgb(74 4 78 / var(--tw-bg-opacity));
+  background-color: rgb(84 0 229 / var(--tw-bg-opacity));
 }
 
 .bg-white {

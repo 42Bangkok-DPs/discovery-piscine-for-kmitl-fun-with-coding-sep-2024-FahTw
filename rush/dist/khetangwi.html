@@ -1,80 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
-    <title>khetangwi</title>
-  </head>
-  <body>
-    <div class="bg-purple-200">
-      <nav class="bg-fuchsia-950 p-4">
-        <div class="container m-auto flex justify-end items-center text-[25px]">
-          <ul class="flex space-x-16">
-            <li>
-              <a href="#" class="text-white hover:text-gray-400 cursor-pointer"
-                >About</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-white hover:text-gray-400">Skill</a>
-            </li>
-            <li>
-              <a href="#" class="text-white hover:text-gray-400">Contact</a>
-            </li>
-          </ul>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Khemapson Tangwirun</title>
+    <style>
+        .navbar-scrolled {
+            opacity: 0.7;
+            background-color: #663399 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="bg-fuchsia-950 p-4 fixed top-0 w-full z-50">
+        <div class="container mx-auto flex justify-center md:justify-end items-center text-[16px] md:text-[25px]">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+                <li>
+                    <a href="#intro" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">
+                        Skill
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="text-white hover:bg-purple-600 hover:rounded-md transition-transform px-4 py-2">
+                        Contact
+                    </a>
+                </li>
+            </ul>
         </div>
-      </nav>
-      <section class="intro border-2 border-red-700 mx-40 my-10">
-        <div class="flex items-center space-x-10">
-          <div class="text-[120px] text-purple-900 font-bold mt-6 mb-4">
-            <h1>Hello</h1>
-          </div>
+    </nav>
 
-          <div class="text-6xl">
-            <h1>Khemapson Tangwirun</h1>
-          </div>
-
-          <div>
-            <img src="../src/assets/girl.png" alt="girl" />
-          </div>
+    <section id="intro" class="border-2 bg-purple-200 min-h-screen flex flex-col justify-center">
+        <div class="mx-4 md:mx-10 lg:mx-40 my-10">
+            <div class="flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-10">
+                <div class="text-[80px] md:text-[120px] text-purple-900 font-bold mt-6 mb-4 text-center md:text-left">
+                    <h1>Hello</h1>
+                </div>
+                <div class="md:text-6xl text-center md:text-left">
+                    <h1 class="text-4xl"id="typing-text"></h1>
+                </div>
+                <div class="text-center">
+                    <img class="w-full max-w-xs md:max-w-xl" src="../src/assets/girl.png" alt="girl" />
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="about h-full bg-white p-8">
-        <div class="flex justify-center items-center border-2 border-red-700">
-          <h1 class="text-5xl">About me</h1>
+    <section id="about" class="bg-white p-4 md:p-8 min-h-screen">
+        <div class="flex justify-center items-centerpy-4">
+            <h1 class="text-3xl md:text-5xl font-bold">About me</h1>
         </div>
-
-        <div class="text-center mb-4">
-          <h1 class="text-3xl">I'm Fah</h1>
-          <p class="text-xl">Student</p>
+        <div class="text-center my-4">
+            <h1 class="text-2xl md:text-3xl">I'm Fah</h1>
+            <p class="text-lg md:text-xl">Student</p>
         </div>
-
-        <div class="flex justify-center lg:justify-end mb-4">
-          <img
-            src="../src/assets/fah.webp"
-            alt="fah"
-            style="
-              width: 100%;
-              max-width: 300px;
-              max-height: 400px;
-              object-fit: cover;
-              border-radius: 0.5rem;
-            "
-          />
+        <div class="flex justify-center mb-4">
+            <img src="../src/assets/fah.webp" alt="fah" class="w-full object-cover max-w-xs md:max-w-[400px] md:h-[400px] rounded-lg" />
         </div>
+        <div class="text-center m-8">
+            <p class="text-base md:text-lg">
+                Hi, I'm studying Information Technology, but I'm not very good at it yet. <br />
+                I enjoy making websites and want to learn more about programming. <br />
+                I believe I will get better one day.
+            </p>
+        </div>
+    </section>
 
+    <section id="skills" class="min-h-screen bg-pink-200 p-4 md:p-16">
         <div class="text-center">
-          <p class="text-lg">ค่อยคิดว่าใส่ไรดี</p>
+            <h1 class="text-pink-800 text-3xl md:text-5xl font-bold">Skills</h1>
         </div>
-      </section>
+        <ul class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-white text-xl m-20">
+            <div class="bg-white rounded-2xl flex justify-center items-center">
+                <li class="space-x-2">
+                    <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://www.donmusics.com/images/jakae_03.png" alt="zither" />
+                    <span class="text-pink-800 justify-center flex items-end">Thai Music</span>
+                </li>
+            </div>
+            <div class="bg-white rounded-2xl flex justify-center items-center">
+                <li class="space-x-2">
+                    <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/html-5--v1.png" alt="html-5" />
+                    <span class="flex items-end justify-center text-pink-800">Html</span>
+                </li>
+            </div>
+            <div class="bg-white rounded-2xl flex justify-center items-center">
+                <li class="space-x-2">
+                    <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/css3.png" alt="css" />
+                    <span class="flex items-end justify-center text-pink-800">Css</span>
+                </li>
+            </div>
+            <div class="bg-white rounded-2xl flex justify-center items-center">
+                <li class="space-x-2">
+                    <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/python--v1.png" alt="python" />
+                    <span class="flex items-end justify-center text-pink-800">Python</span>
+                </li>
+            </div>
+            <div class="bg-white rounded-2xl flex justify-center items-center">
+                <li class="space-x-2">
+                    <img class="w-[72px] h-[72px] md:w-[144px] md:h-[144px]" src="https://img.icons8.com/color/144/java-coffee-cup-logo--v1.png" alt="java" />
+                    <span class="flex items-end justify-center text-pink-800">Java</span>
+                </li>
+            </div>
+        </ul>
+    </section>
 
-      <section class="skills h-full bg-slate-900 p-8">
-        <div class="flex justify-center items-center border-2 border-red-700">
-          <h1 class="text-5xl">Skills</h1>
+    <section id="contact">
+        <div class="flex justify-center items-center py-4">
+            <h1 class="text-3xl font-bold">Contact Me</h1>
         </div>
-      </section>
-    </div>
-  </body>
+        <div class="contact flex justify-center items-center space-x-7">
+            <a href="https://www.facebook.com/profile.php?id=100000494179400">
+                <img src="https://img.icons8.com/fluency-systems-filled/50/facebook.png" alt="face" />
+            </a>
+            <a href="https://www.instagram.com/tangwirulh/">
+                <img src="https://img.icons8.com/ios-glyphs/50/instagram-new.png" alt="ig" />
+            </a>
+            <a href="https://github.com/FahTw">
+              <img src="https://img.icons8.com/ios-filled/50/github.png" alt="github">
+            </a>
+        </div>
+        <span class="flex items-center justify-center">66070021@kmitl.ac.th</span>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typingTextElement = document.getElementById("typing-text");
+            const text = "Khemapson Tangwirun";
+            let index = 0;
+            let isDeleting = false;
+
+            function type() {
+              if (!isDeleting && index < text.length) {
+                typingTextElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            } 
+            //ลบข้อความ
+              else if (isDeleting && index > 0) {
+                typingTextElement.textContent = text.substring(0, index - 1);
+                index--;
+                setTimeout(type, 100); // ระยะเวลาสำหรับการลบ
+            } 
+            //ครบแล้วและเริ่มลบ
+              else if (index === text.length) {
+                isDeleting = true;
+                setTimeout(type, 1000); // พักก่อนเริ่มลบ
+            }
+            //เริ่มพิมพ์ใหม่
+              else if (index === 0) {
+                isDeleting = false;
+                setTimeout(type, 500); // พักก่อนเริ่มพิมพ์ใหม่
+            }
+            }
+            type();
+        });
+
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+</body>
 </html>
