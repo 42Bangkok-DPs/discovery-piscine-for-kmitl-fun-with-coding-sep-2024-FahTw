@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple To-Do List</title>
+    <title>Local Task Management</title>
     <style>
-      #ft_list {
-        margin-top: 20px;
-        border: solid rgb(93, 14, 158);
-        min-height: 200px;
-        border-radius: 10px;
-        padding: 10px;
-      }
-      #add-todo-btn {
-        width: 100%;
-        border: solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-      }
-      #new-todo-input {
-        width: 80vw;
-      }
+        #ft_list {
+            margin-top: 20px;
+            border: 2px solid rgb(93, 14, 158);
+            min-height: 200px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
 
-      #addnew {
-        width: 100px;
-        color: blueviolet;
-        background-color: rgb(230, 206, 227);
-        border: none;
-      }
+        #add-todo-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
 
+        #addnew {
+            width: 100px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(93, 14, 158);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #addnew:hover {
+            background-color: #5d0e9e;
+        }
+
+        .todo {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e6cee3;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo:hover {
+            background-color: #d0b8ce;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <div id="ft_list"></div>
-    <form id="add-todo-btn">
-        <input type="text" id="new-todo-input" placeholder="Enter your to do ka">
-        <button type="submit" id="addnew">New</button>
-    </form>
-  </body>
+
+    <div id="add-todo-btn">
+        <button id="addnew">New</button>
+    </div>
+
+    <script src="todo.js"></script>
+
+</body>
 </html>
