@@ -11,6 +11,7 @@
         display: inline-block;
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="cal">
@@ -23,68 +24,76 @@
         <option value="%">%</option>
       </select>
       <input type="text" id="right" placeholder="Enter num" />
-      <button onclick="calculator()">Try me</button>
+      <button id="calculate">Try me</button>
     </div>
 
     <script>
-      function calculator() {
-        const left = parseFloat(document.getElementById("left").value);
-        const right = parseFloat(document.getElementById("right").value);
-        const operator = document.getElementById("opr").value;
-
-        if (isNaN(left) || isNaN(right)) {
-          alert("Error :(");
-          console.log("Error :(");
-          return;
+      $(document).ready(function() {
+        function isValidNumber(value) {
+          return !isNaN(value) && /^[0-9]+(\.[0-9]+)?$/.test(value);
         }
 
-        if (!Number.isInteger(left) || !Number.isInteger(right)) {
-          alert("Error :(");
-          console.log("Error :(");
-          return;
-        }
+        function calculator() {
+          const leftval = $('#left').val();
+          const rightval = $('#right').val();
+          const operator = $('#opr').val();
 
-        if ((operator === "/" || operator === "%") && right === 0) {
-          alert("Error :(");
-          console.log("Error :(");
-          return;
-        }
-
-        let result;
-        switch (operator) {
-          case "+":
-            result = left + right;
-            break;
-          case "-":
-            result = left - right;
-            break;
-          case "*":
-            result = left * right;
-            break;
-          case "/":
-            result = left / right;
-            break;
-          case "%":
-            result = left % right;
-            break;
-          default:
+          if (!isValidNumber(leftval) || !isValidNumber(rightval)) {
             alert("Error :(");
+            console.log("Error :(");
             return;
-        }
-        
-        if (!Number.isInteger(result)) {
-          alert("Error :(");
-          console.log("Error :(");
-          return;
+          }
+
+          const left = parseFloat(leftval);
+          const right = parseFloat(rightval);
+
+          if ((operator === "/" || operator === "%") && right === 0) {
+            alert("Error: Division by zero.");
+            console.log("Error: Division by zero.");
+            return;
+          }
+
+          let result;
+          switch (operator) {
+            case "+":
+              result = left + right;
+              break;
+            case "-":
+              result = left - right;
+              break;
+            case "*":
+              result = left * right;
+              break;
+            case "/":
+              result = left / right;
+              break;
+            case "%":
+              result = left % right;
+              break;
+            default:
+              alert("Error :(");
+              return;
+          }
+
+          // ตรวจสอบว่า result เป็นจำนวนเต็ม
+          if (!Number.isInteger(result)) {
+            alert("Error: Result is not an integer.");
+            console.log("Error: Result is not an integer.");
+            return;
+          }
+
+          alert("Result: " + result);
+          console.log("Result: " + result);
         }
 
-        alert("Result: " + result);
-        console.log("Result: " + result);
-      }
+        $('#calculate').click(function() {
+          calculator();
+        });
 
-      setInterval(function () {
-        alert("Please, use me...");
-      }, 30000);
+        setInterval(function () {
+          alert("Please, use me...");
+        }, 30000);
+      });
     </script>
   </body>
 </html>
