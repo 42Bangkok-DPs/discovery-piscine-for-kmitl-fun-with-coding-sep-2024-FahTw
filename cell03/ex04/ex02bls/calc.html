@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เครื่องคิดเลขจำนวนเต็ม</title>
+    <style>
+      .cal {
+        border: solid red;
+        padding: 10px;
+        display: inline-block;
+      }
+    </style>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="cal">
+      <input type="text" id="left" placeholder="Enter num" />
+      <select name="operation" id="opr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input type="text" id="right" placeholder="Enter num" />
+      <button id="calcBtn">Try me</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#calcBtn").click(function () {
+          const left = parseFloat($("#left").val());
+          const right = parseFloat($("#right").val());
+          const operator = $("#opr").val();
+
+          if (isNaN(left) || isNaN(right)) {
+            alert("Error: Input values are not numbers.");
+            console.log("Error: Input values are not numbers.");
+            return;
+          }
+
+          if (!Number.isInteger(left) || !Number.isInteger(right)) {
+            alert("Error: Both numbers must be integers.");
+            console.log("Error: Both numbers must be integers.");
+            return;
+          }
+
+          if ((operator === "/" || operator === "%") && right === 0) {
+            alert("Error: Division by zero is not allowed.");
+            console.log("Error: Division by zero is not allowed.");
+            return;
+          }
+
+          let result;
+          switch (operator) {
+            case "+":
+              result = left + right;
+              break;
+            case "-":
+              result = left - right;
+              break;
+            case "*":
+              result = left * right;
+              break;
+            case "/":
+              result = left / right;
+              break;
+            case "%":
+              result = left % right;
+              break;
+            default:
+              alert("Error: Invalid operation.");
+              console.log("Error: Invalid operation.");
+              return;
+          }
+
+          if (!Number.isInteger(result)) {
+            alert("Error: Result is not an integer.");
+            console.log("Error: Result is not an integer.");
+            return;
+          }
+
+          alert("Result: " + result);
+          console.log("Result: " + result);
+        });
+
+        setInterval(function () {
+          alert("Please, use me...");
+        }, 30000);
+      });
+    </script>
+  </body>
+</html>
