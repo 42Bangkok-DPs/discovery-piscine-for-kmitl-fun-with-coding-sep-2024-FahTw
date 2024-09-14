@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>เครื่องคิดเลขจำนวนเต็ม</title>
+    <title>calculator</title>
     <style>
       .cal {
         border: solid red;
@@ -11,8 +11,7 @@
         display: inline-block;
       }
     </style>
-    <!-- Include jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div class="cal">
@@ -25,31 +24,32 @@
         <option value="%">%</option>
       </select>
       <input type="text" id="right" placeholder="Enter num" />
-      <button id="calcBtn">Try me</button>
+      <button id="calculate">Try me</button>
     </div>
 
     <script>
-      $(document).ready(function () {
-        $("#calcBtn").click(function () {
-          const left = parseFloat($("#left").val());
-          const right = parseFloat($("#right").val());
-          const operator = $("#opr").val();
+      $(document).ready(function() {
+        function isValidNumber(value) {
+          return !isNaN(value) && /^[0-9]+(\.[0-9]+)?$/.test(value);
+        }
 
-          if (isNaN(left) || isNaN(right)) {
-            alert("Error: Input values are not numbers.");
-            console.log("Error: Input values are not numbers.");
+        function calculator() {
+          const leftval = $('#left').val();
+          const rightval = $('#right').val();
+          const operator = $('#opr').val();
+
+          if (!isValidNumber(leftval) || !isValidNumber(rightval)) {
+            alert("Error :(");
+            console.log("Error :(");
             return;
           }
 
-          if (!Number.isInteger(left) || !Number.isInteger(right)) {
-            alert("Error: Both numbers must be integers.");
-            console.log("Error: Both numbers must be integers.");
-            return;
-          }
+          const left = parseFloat(leftval);
+          const right = parseFloat(rightval);
 
           if ((operator === "/" || operator === "%") && right === 0) {
-            alert("Error: Division by zero is not allowed.");
-            console.log("Error: Division by zero is not allowed.");
+            alert("Error: Division by zero.");
+            console.log("Error: Division by zero.");
             return;
           }
 
@@ -71,11 +71,11 @@
               result = left % right;
               break;
             default:
-              alert("Error: Invalid operation.");
-              console.log("Error: Invalid operation.");
+              alert("Error :(");
               return;
           }
 
+          // ตรวจสอบว่า result เป็นจำนวนเต็ม
           if (!Number.isInteger(result)) {
             alert("Error: Result is not an integer.");
             console.log("Error: Result is not an integer.");
@@ -84,6 +84,10 @@
 
           alert("Result: " + result);
           console.log("Result: " + result);
+        }
+
+        $('#calculate').click(function() {
+          calculator();
         });
 
         setInterval(function () {
