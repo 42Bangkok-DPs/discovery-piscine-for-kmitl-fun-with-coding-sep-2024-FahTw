@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <style>
+        #ft_list {
+            margin-top: 20px;
+            border: 2px solid rgb(93, 14, 158);
+            min-height: 200px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        #add-todo-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #addnew {
+            width: 100px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(93, 14, 158);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #addnew:hover {
+            background-color: #5d0e9e;
+        }
+
+        .todo {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #e6cee3;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo:hover {
+            background-color: #d0b8ce;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div id="ft_list"></div>
+
+    <div id="add-todo-btn">
+        <button id="addnew">New</button>
+    </div>
+
+    <script src="todo.js"></script>
+
+</body>
+</html>
