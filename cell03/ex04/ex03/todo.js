@@ -1,4 +1,0 @@
-documentg
-function addNew() {
-
-}
