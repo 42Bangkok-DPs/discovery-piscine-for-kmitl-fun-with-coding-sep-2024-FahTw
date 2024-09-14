@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Calculator</title>
+    <title>calculator</title>
     <style>
-        .cal {
-            border: solid red;
-            padding: 10px;
-            display: inline-block;
-        }
+      .cal {
+        border: solid red;
+        padding: 10px;
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
@@ -28,19 +28,25 @@
 
     <script>
       function calculator() {
-        const left = parseInt(document.getElementById("left").value, 10);
-        const right = parseInt(document.getElementById("right").value, 10);
+        const left = parseFloat(document.getElementById("left").value);
+        const right = parseFloat(document.getElementById("right").value);
         const operator = document.getElementById("opr").value;
 
-        if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+        if (isNaN(left) || isNaN(right)) {
+          alert("Error :(");
+          console.log("Error :(");
+          return;
+        }
+
+        if (!Number.isInteger(left) || !Number.isInteger(right)) {
           alert("Error :(");
           console.log("Error :(");
           return;
         }
 
         if ((operator === "/" || operator === "%") && right === 0) {
-          alert("It's over 9000!");
-          console.log("It's over 9000!");
+          alert("Error :(");
+          console.log("Error :(");
           return;
         }
 
@@ -56,24 +62,20 @@
             result = left * right;
             break;
           case "/":
-            if (rightNumber === 0) {
-              alert("It's over 9000!");
-              console.log("It's over 9000!");
-              return;
-            }
             result = left / right;
             break;
           case "%":
-            if (rightNumber === 0) {
-              alert("It's over 9000!");
-              console.log("It's over 9000!");
-              return;
-            }
             result = left % right;
             break;
           default:
             alert("Error :(");
             return;
+        }
+        
+        if (!Number.isInteger(result)) {
+          alert("Error :(");
+          console.log("Error :(");
+          return;
         }
 
         alert("Result: " + result);
