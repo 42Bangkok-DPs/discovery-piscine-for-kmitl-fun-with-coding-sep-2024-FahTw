@@ -48,8 +48,8 @@
           const right = parseFloat(rightval);
 
           if ((operator === "/" || operator === "%") && right === 0) {
-            alert("Error: Division by zero.");
-            console.log("Error: Division by zero.");
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
             return;
           }
 
@@ -75,10 +75,10 @@
               return;
           }
 
-          // ตรวจสอบว่า result เป็นจำนวนเต็ม
+          // result int naka
           if (!Number.isInteger(result)) {
-            alert("Error: Result is not an integer.");
-            console.log("Error: Result is not an integer.");
+            alert("Error :(");
+            console.log("Error :(");
             return;
           }
 
